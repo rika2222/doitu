@@ -4,16 +4,14 @@
     
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         
-        $exam_name = $_POST['exam_name'];
-        $address = $_POST['address'];
-        $lat = $_POST['lat'];
-        $lng = $_POST['lng'];
-        $year = $_POST['year'];
-        $month  =$_POST['month'];
-        $day = $_POST['day'];
+        $name = $_POST['name'];
+        $art = $_POST['art'];
+        $adresse = $_POST['adresse'];
+        $land = $_POST['land'];
+        $tag = $_POST['tag'];
         $url = $_POST['url'];
         
-        $dsn = 'mysql:host=localhost;dbname=maps';
+        $dsn = 'mysql:host=localhost;dbname=deutsch';
         $db_username = 'root';
         $db_password = '';
         
@@ -27,16 +25,14 @@
         
         $pdo = new PDO($dsn, $db_username, $db_password, $options);
         
-        $sql = "insert into exams(exam_name, address, lat, lng, year, month, day, url) values(:exam_name, :address, :lat, :lng, :year, :month, :day, :url)";
+        $sql = "insert into prufungen(name, art, adresse, land, tag, url) values(:name, :art, :adresse, :land, :tag, :url)";
         $stmt = $pdo -> prepare($sql);
         
-        $stmt->bindParam(':exam_name', $exam_name, PDO::PARAM_STR);
-        $stmt->bindParam(':address', $address, PDO::PARAM_STR);
-        $stmt->bindParam(':lat', $lat, PDO::PARAM_STR);
-        $stmt->bindParam(':lng', $lng, PDO::PARAM_STR);
-        $stmt->bindParam(':year', $year, PDO::PARAM_STR);
-        $stmt->bindParam(':month', $month, PDO::PARAM_STR);
-        $stmt->bindParam(':day', $day, PDO::PARAM_STR);
+        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+        $stmt->bindParam(':art', $art, PDO::PARAM_STR);
+        $stmt->bindParam(':adresse', $adresse, PDO::PARAM_STR);
+        $stmt->bindParam(':land', $land, PDO::PARAM_STR);
+        $stmt->bindParam(':tag', $tag, PDO::PARAM_STR);
         $stmt->bindParam(':url', $url, PDO::PARAM_STR);
                     
         $stmt -> execute();
@@ -82,52 +78,38 @@
                 <form class="col-sm-12" action="new.php" method="POST">
                     <!-- 1行 -->
                     <div class="form-group row">
-                        <label class="col-2 col-form-label">試験名</label>
+                        <label class="col-2 col-form-label">試験会場名</label>
                         <div class="col-10">
-                            <input type="text" class="form-control" name="exam_name" required>
+                            <input type="text" class="form-control" name="name" required>
                         </div>
                     </div>
                 
                     <!-- 1行 -->
                     <div class="form-group row">
+                        <label class="col-2 col-form-label">試験名</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control" name="art" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
                         <label class="col-2 col-form-label">住所</label>
                         <div class="col-10">
-                            <input type="text" class="form-control" name="address" required>
+                            <input type="text" class="form-control" name="adresse" required>
                         </div>
                     </div>
                     
                     <div class="form-group row">
-                        <label class="col-2 col-form-label">緯度</label>
+                        <label class="col-2 col-form-label">州</label>
                         <div class="col-10">
-                            <input type="text" class="form-control" name="lat" required>
+                            <input type="text" class="form-control" name="land" required>
                         </div>
                     </div>
                     
                     <div class="form-group row">
-                        <label class="col-2 col-form-label">経度</label>
+                        <label class="col-2 col-form-label">日時</label>
                         <div class="col-10">
-                            <input type="text" class="form-control" name="lng" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group row">
-                        <label class="col-2 col-form-label">年</label>
-                        <div class="col-10">
-                            <input type="text" class="form-control" name="year" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group row">
-                        <label class="col-2 col-form-label">月</label>
-                        <div class="col-10">
-                            <input type="text" class="form-control" name="month" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group row">
-                        <label class="col-2 col-form-label">日</label>
-                        <div class="col-10">
-                            <input type="text" class="form-control" name="day" required>
+                            <input type="text" class="form-control" name="tag" required>
                         </div>
                     </div>
                     

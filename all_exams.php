@@ -6,7 +6,7 @@
     $data = array();
     
     // DB接続情報
-    $dsn = 'mysql:host=localhost;dbname=maps';
+    $dsn = 'mysql:host=localhost;dbname=deutsch';
     $db_username = 'root';
     $db_password = '';
     
@@ -20,7 +20,7 @@
     
     $dbh = new PDO($dsn, $db_username, $db_password, $options);
     
-    $sql = "select exam_name, address, lat, lng, year, month, day, url from exams";
+    $sql = "select name, art, adresse, land, tag, url from prufungen";
     $sth = $dbh -> prepare($sql);
     $sth -> execute();
     
