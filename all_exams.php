@@ -20,7 +20,7 @@
     
     $dbh = new PDO($dsn, $db_username, $db_password, $options);
     
-    $sql = "select name, art, adresse, land, tag, url from prufungen";
+    $sql = "select name, art, adresse, land, tag, url, lat, lng from prufungen";
     $sth = $dbh -> prepare($sql);
     $sth -> execute();
     

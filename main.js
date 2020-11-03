@@ -156,7 +156,7 @@ $(function () {
         // 繧ｳ繝ｳ繝�リ繝ｼ繧 body 縺ｫ謖ｿ蜈･
         $headerCloneContainer.appendTo('body');
 
-        // 繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ譎ゅ↓蜃ｦ逅�ｒ螳溯｡後☆繧九′縲∝屓謨ｰ繧 1 遘帝俣縺ゅ◆繧 30 縺ｾ縺ｧ縺ｫ蛻ｶ髯
+        // 繧ｹ繧ｯ��ｭ繝ｼ繝ｫ譎ゅ↓蜃ｦ逅�ｒ螳溯｡後☆繧九′縲∝屓謨ｰ繧 1 遘帝俣縺ゅ◆繧 30 縺ｾ縺ｧ縺ｫ蛻ｶ髯
         $window.on('scroll', $.throttle(1000 / 15, function () {
             if ($window.scrollTop() > threshold) {
                 $headerCloneContainer.addClass('visible');
@@ -255,7 +255,6 @@ function get_selected_input_items(name) {
 var map;
 var markerD = [];
 var marker = [];
-var mark;
 var infoWindow = [];
 var openWindow;
 
@@ -297,26 +296,48 @@ function setMarker(markerData) {
         // サイドバー
         
         sidebar_html +=  '<span class="map-ls" art="'+ markerData[i]['art'] +'">● ' + '<a href="javascript:myclick(' + i + ')">' + markerData[i]['name'] + '<\/a><br /></span>';
-    // マーカーのセット
-    // draw_by_address(markerData[i]['adresse']);
-    // console.log(markerData[i]['adresse']);
-    // mark[i] = new google.maps.Marker({
-    //     map: map                // マーカーを立てる地図を指定
-    // });
-    myclick(i);
-        // マーカーにクリックイベントを追加
-        // markerEvent(i);
-    }
-    mark = new google.maps.Marker({
-        map: map                // マーカーを立てる地図を指定
-    });
+        // マーカーのセット
+        // draw_by_address(markerData[i]['adresse']);
+        // console.log(markerData[i]['adresse']);
+        marker[i] = new google.maps.Marker({
+            map: map              // マーカーを立てる地図を指定
+        });
+        
+        // マーカーのセット
+        marker[i].setPosition({'lat': parseFloat(markerData[i]['lat']), 'lng': parseFloat(markerData[i]['lng'])})
+        
+        var color
+        switch (markerData[i]['art']) {
+            case 'DSH':
+                color = 'blue'
+                break;
+            case 'TestDaF':
+                color = 'red'
+                break;
+            case 'Telc':
+                color = 'green'
+                break;
+            case 'Goethe ':
+                color = 'yellow'
+                break;
+            default:
+                color = 'red'
+                break;
+        }
     
-   // Marker clusterの追加
-    // var markerCluster = new MarkerClusterer(
-    //     map,
-    //     marker,
-    //     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
-    // );
+        marker[i].setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/' + color + '-dot.png'})
+        
+        // マーカーにクリックイベントを追加
+        markerEvent(i);
+    }
+
+    
+    // Marker clusterの追加
+    var markerCluster = new MarkerClusterer(
+        map,
+        marker,
+        {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
+    );
     
     // サイドバー
     document.getElementById("sidebar").innerHTML = sidebar_html;
@@ -369,57 +390,16 @@ function markerEvent(i) {
 }
 
 function myclick(i) {
-    var latNum, lngNum;
-
-    $.ajax({
-        type: "GET",
-        url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + markerD[i]['name'] + "&key=AIzaSyALg70uaMcYjkzto9oPmiXyODIXCvpvAzg",
-        dataType: "json",
-        success: function(data){
-            latNum = data['results'][0]['geometry']['location']['lat']
-            lngNum = data['results'][0]['geometry']['location']['lng']
-            // マーカー位置セット
-            var markerLatLng = new google.maps.LatLng({
-                lat: latNum,
-                lng: lngNum
-            });
-            
-            var color
-            switch (markerD[i]['art']) {
-                case 'DSH':
-                    color = 'blue'
-                    break;
-                case 'TestDaF':
-                    color = 'red'
-                    break;
-                case 'Telc':
-                    color = 'green'
-                    break;
-                case 'Goethe ':
-                    color = 'yellow'
-                    break;
-                default:
-                    color = 'white'
-                    break;
-            }
-        
-            
-            
-            // マーカーのセット
-            mark.setPosition(markerLatLng)
-            mark.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/' + color + '-dot.png'})
-            // 吹き出しの追加
-            infoWindow[i] = new google.maps.InfoWindow({
-                content:  markerD[i]['tag'] + ':　'+ markerD[i]['art'] + '<br><br>' +'<a href="' + markerD[i]['url'] + '" target="_blank">' + markerD[i]['name'] + '</a>'
-            });
-        
-            if(openWindow){
-                openWindow.close();
-            }
-            infoWindow[i].open(map, mark);
-            openWindow = infoWindow[i];
-        }
+    // 吹き出しの追加
+    infoWindow[i] = new google.maps.InfoWindow({
+        content:  markerD[i]['tag'] + ':　'+ markerD[i]['art'] + '<br><br>' +'<a href="' + markerD[i]['url'] + '" target="_blank">' + markerD[i]['name'] + '</a>'
     });
+
+    if(openWindow){
+        openWindow.close();
+    }
+    infoWindow[i].open(map, marker[i]);
+    openWindow = infoWindow[i];
 }
 
 $(function() {
@@ -438,5 +418,6 @@ $(function() {
             }
         })
     }
-  })  
+  })
+
 })
