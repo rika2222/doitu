@@ -83,7 +83,6 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="//maps.google.com/maps/api/js?language=ja&sensor=false"></script>
     <script src="modernizr.custom.min.js"></script>
     <script src="jquery-1.10.2.min.js"></script>
     <script src="jquery-ui-1.10.3.custom.min.js"></script>
@@ -150,21 +149,21 @@
                     <h1 class="verfahrenh1">ドイツに留学するまでにやること</h1>
                 </div>
                 <div class="row es">
-                    <div class="offset-md-1 col-md-2">
+                    <div class="col-md-2 offset-md-3 a2">
                         <a href="#sprachdiv"><img src="200930sprach.png" alt="sprach" height="200" width="200" class="sprach_image"></a>ドイツ語の習得
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 a2">
                         <a href="./"><img src="200930visa.png" alt="visa" height="200" width="200" class="visa_image"></a>ビザ取得
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 offset-right-md-3 a2">
                         <a href="./"><img src="200930schule.png" alt="schule" height="200" width="200" class="schule_image"></a>志望大学・教育機関の決定
                     </div>
-                    <p class="mussen-p">→</p>
-                    <div class="col-md-2">
-                        <a href="./"><img src="200930bewerbung.png" alt="bewerbung" height="200" width="200" class="bewerbung_image"></a>申し込み・ビザ取得<br>
+                    <div class="offset-md-5 col-md-2 mussen-p">↓</div>
+                    <div class="offset-md-5 col-md-2 a2">
+                        <a href="./"><img src="200930bewerbung.png" alt="bewerbung" height="200" width="200" class="bewerbung_image"></a>申し込み<br>
                     </div>    
-                    <p class="mussen-p">→</p>
-                    <div class="col-md-2">
+                    <div class="offset-md-5 col-md-2 mussen-p">↓</div>
+                    <div class="offset-md-5 col-md-2 a2">
                         <a href="./"><img src="201005zulassung.png" alt="zulassung" height="200" width="200" class="zulassung_image"></a>入学
                     </div>    
                 </div>
@@ -176,11 +175,11 @@
                     ドイツ語力を証明するための試験はいくつかあるのですが、その中でも代表的な試験を４つご紹介します！
                 </p>
             </div>
-            <div class="row">
-                <a class="offset-md-1 col-md-2 tab_btn is-active-btn" section="#item1">DSH</a>
-                <a class="col-md-3 tab_btn" section="#item2">TestDaf</a>
-                <a class="col-md-3 tab_btn" section="#item3">Telc C1 Hochschule</a>
-                <a class="col-md-2 tab_btn" section="#item4">Goethe</a>
+            <div class="row tabbbb">
+                <a class="tab_btn tabu1 is-active-btn" section="#item1">DSH</a>
+                <a class="tab_btn tabu2" section="#item2">TestDaf</a>
+                <a class="tab_btn tabu3" section="#item3">Telc C1 Hochschule</a>
+                <a class="tab_btn tabu4" section="#item4">Goethe</a>
             </div>
             <div class="row">
                 <div class="col-md-12 tab_item is-active-item" id="item1">
@@ -190,47 +189,55 @@
                         </div>
                         <div class="col-md-7">
                             <ul class="float-right">
-                                <li class="DSHli">DSHの特徴</li>
-                                <p class="DSHtext">
-                                    ドイツの大学入学を目指す外国人向けの語学試験です。
-                                    各大学が主催し作成しているためドイツ国内でしか受験できず、難易度にばらつきがあります。
-                                    対策も各試験の過去問ホームぺジからダウンロードしそれぞれ行わなければなりません。
-                                    合格すれば一定のドイツ語能力を示せるので、受験した大学だけでなくドイツ全国の大学に応募することができます。
-                                    向き不向きがあるので一概には言えませんが大抵の場合TestDafなど他の語学試験に比べてDSH試験は難易度が低くく、
-                                    受験料は80€程度で比較的安く受験できます。
-                                    試験は２日に分けられており、読解・聴解・筆記に合格した人のみ違う日に開催される口頭試験を受けられるようです。
-                                    結果も一週間以内にわかる場合がほとんどです。
-                                    デメリットとして年に各大学で１、２回しか開催されておらず、外部受験だと定員がすぐに埋まってしまって受験しにくい点があります。
-                                    大学の語学準備コースなど、卒業試験としてDSHを受けられる公立の語学学校でしっかりと対策をしつつ受験することをおすすめします。
-                                    またDSH試験を受験できる私立の語学学校だとC1コースの授業料とDSH試験の受験料合わせて1000€近くかかることもありますし、
-                                    DSH試験を受験できない大学の語学準備コースもあるので注意しなければなりません。<br>
-                                    私の感覚ではこのDSH試験で語学証明をして入学した外国人が一番多いと思います。
-                                </p>
-                                <li class="DSHli">試験の構成</li>
-                                <h4 class="DSHtext2">
-                                    筆記試験（一次試験）
-                                </h4>
-                                <ul class="DSHtext3">
-                                    <li class="li-DSH-struktur">Leseverstehen(読解)</li>
-                                    <li class="li-DSH-struktur">Hörverstehen(聞き取り)</li>
-                                    <li class="li-DSH-struktur">Textproduktion(作文)</li>
-                                    <li class="li-DSH-struktur">Wissenschaftssprachliche Strukturen(文法問題)</li>
-                                </ul>
-                                <br>
-                                <h4 class="DSHtext2">
-                                    口頭試験（二次試験）
-                                </h4>
-                                <ul class="DSHtext4">
-                                    <li class="li-DSH-struktur">自己紹介・大学の志望動機・テストを受けた感想</li>
-                                    <li class="li-DSH-struktur">専門分野に関連する文章の要約と質疑応答・事前に渡される15行程度の記事に対する質疑応答など</li>
-                                </ul>
-                                <li class="DSHli">合格基準</li>
-                                <p>筆記試験、口述試験共に57％以上正答した場合が合格とされます。 57％以上の合格者は、筆記＋口述の正答率によって次の3段階評価が与えられます。</p>
-                                <ul class="DSHtext5">
-                                    <li class="li-DSH-bestehen">DSH1 (57％〜66%) 音楽など芸術系の学部には応募できることもあります</li>
-                                    <li class="li-DSH-bestehen">DSH2 (67％〜81%)　大抵の学部に応募できます</li>
-                                    <li class="li-DSH-bestehen">DSH3 (82％〜100%)　医学部を含む全ての学部に応募できます</li>
-                                </ul>
+                                <div class="row">
+                                    <div class="col-md-12 dshmerkmal">
+                                        <li class="DSHli">DSHの特徴</li>
+                                        <p class="DSHtext">
+                                            ドイツの大学入学を目指す外国人向けの語学試験です。
+                                            各大学が主催し作成しているためドイツ国内でしか受験できず、難易度にばらつきがあります。
+                                            対策も各試験の過去問ホームぺジからダウンロードしそれぞれ行わなければなりません。
+                                            合格すれば一定のドイツ語能力を示せるので、受験した大学だけでなくドイツ全国の大学に応募することができます。
+                                            向き不向きがあるので一概には言えませんが大抵の場合TestDafなど他の語学試験に比べてDSH試験は難易度が低くく、
+                                            受験料は80€程度で比較的安く受験できます。
+                                            試験は２日に分けられており、読解・聴解・筆記に合格した人のみ違う日に開催される口頭試験を受けられるようです。
+                                            結果も一週間以内にわかる場合がほとんどです。
+                                            デメリットとして年に各大学で１、２回しか開催されておらず、外部受験だと定員がすぐに埋まってしまって受験しにくい点があります。
+                                            大学の語学準備コースなど、卒業試験としてDSHを受けられる公立の語学学校でしっかりと対策をしつつ受験することをおすすめします。
+                                            またDSH試験を受験できる私立の語学学校だとC1コースの授業料とDSH試験の受験料合わせて1000€近くかかることもありますし、
+                                            DSH試験を受験できない大学の語学準備コースもあるので注意しなければなりません。<br>
+                                            私の感覚ではこのDSH試験で語学証明をして入学した外国人が一番多いと思います。
+                                        </p>
+                                    </div>
+                                    <div class="col-md-12 dshstr">
+                                        <li class="DSHli">試験の構成</li>
+                                        <h4 class="DSHtext2">
+                                            筆記試験（一次試験）
+                                        </h4>
+                                        <ul class="DSHtext3">
+                                            <li class="li-DSH-struktur">Leseverstehen(読解)</li>
+                                            <li class="li-DSH-struktur">Hörverstehen(聞き取り)</li>
+                                            <li class="li-DSH-struktur">Textproduktion(作文)</li>
+                                            <li class="li-DSH-struktur">Wissenschaftssprachliche Strukturen(文法問題)</li>
+                                        </ul>
+                                        <br>
+                                        <h4 class="DSHtext2">
+                                            口頭試験（二次試験）
+                                        </h4>
+                                        <ul class="DSHtext4">
+                                            <li class="li-DSH-struktur">自己紹介・大学の志望動機・テストを受けた感想</li>
+                                            <li class="li-DSH-struktur">専門分野に関連する文章の要約と質疑応答・事前に渡される15行程度の記事に対する質疑応答など</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="col-md-12 dshbestehe">
+                                        <li class="DSHli">合格基準</li>
+                                        <p>筆記試験、口述試験共に57％以上正答した場合が合格とされます。 57％以上の合格者は、筆記＋口述の正答率によって次の3段階評価が与えられます。</p>
+                                        <ul class="DSHtext5">
+                                            <li class="li-DSH-bestehen">DSH1 (57％〜66%) 音楽など芸術系の学部には応募できることもあります</li>
+                                            <li class="li-DSH-bestehen">DSH2 (67％〜81%)　大抵の学部に応募できます</li>
+                                            <li class="li-DSH-bestehen">DSH3 (82％〜100%)　医学部を含む全ての学部に応募できます</li>
+                                        </ul>
+                                    </div>
+                                </div>    
                             </ul>    
                         </div>    
                     </div>        
@@ -242,6 +249,7 @@
                         </div>
                         <div class="col-md-7">
                             <ul class="float-right">
+                                <div class=""
                                 <li class="testdafli">TestDafの特徴</li>
                                 <p class="testdaftext">
                                     TestDaFとは、ドイツ語能力を証明するための語学能力試験で、ドイツの大学応募時に必要なドイツ語能力証明書だけでなく、就職活動にも有効な試験です。
@@ -432,8 +440,16 @@
                     <a href="new.php" class="btn btn-primary">新規試験情報登録</a>
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <input class="map-cb" type="checkbox" name="DSH"/>DSH
+                    <input class="map-cb" type="checkbox" name="TestDaF"/>TestDaF
+                    <input class="map-cb" type="checkbox" name="Telc"/>Telc
+                    <input class="map-cb" type="checkbox" name="Goethe "/>Goethe
+                </div>
+            </div>
             <div class="row mt-3">
-                <table class="col-sm-12 table">
+                <table class="offset-sm-1 col-sm-11 table">
                     <tr>
                         <td><div id="target"></div></td>
                         <td><div id="sidebar"></div></td>
@@ -564,10 +580,9 @@
                 </div>    
             </div>
         </div>
-         <!-- MarkerCluster -->
+            <!-- MarkerCluster -->
             <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
             <!--Google MAP API KEY -->
             <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyALg70uaMcYjkzto9oPmiXyODIXCvpvAzg&callback=initMap" async defer></script>
-           
     </body>
 </html>

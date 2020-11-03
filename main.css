@@ -369,8 +369,8 @@ img { vertical-align: middle; }
     display: table;
 }
 .mussen-p {
-    padding-top: 80px;
-    padding-left:30px;
+    font-size: 50px;
+    text-align: center;
 }
 .muusen1 {
     display: table-cell;
@@ -387,11 +387,18 @@ img { vertical-align: middle; }
 .bewerbung_image {
     object-fit: cover;
 }    
+.bewerbung2 {
+    text-align: center;
+}
 .zulassung_image {
     object-fit: cover;
-}    
-.e {
+}   
+.a2{
+    
+}
+.es {
     color: #ffd;
+    text-align: center;
 }
 /*----------タブ-------*/
 #sprachdiv {
@@ -420,26 +427,51 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.tabbbb{
+    background-color: #ffd;
+    color: white;
+    text-align:center
+}
 
 .tab_btn {
   font-size: 24px;
   padding: 5px;
-  background-color: #E0F2F7;
 　display: flexbox; /* ボタンを横並びに。flexboxなどでも可 */
-  opacity: 0.5;  /* 非アクティブなボタンは半透明にする */
   border-radius: 5px 5px 0 0;
+  margin-left: 1%;
+  width: 21%;
+  color: white;
+  font-weight: bolder; 
+}
+.tabu1{
+    margin-left: 5%;
+    background-color: #ff7f50;
+    opacity: 0.8;
+}
+.tabu2{
+    background-color: #f9d56e;
+    opacity: 0.8;
+}
+.tabu3{
+    background-color: #ff6347;
+    opacity: 0.8;
+}
+.tabu4{
+    background-color: #f92;
+    opacity: 0.8;
+    margin-right: 5%;
 }
 
 .is-active-btn {
-  opacity: 1;  /* アクティブなボタンは半透明を解除 */
-  color: #00BFFF; /* 文字色も変える */
+  opacity: 1;  /*アクティブなボタンは半透明を解除 */
+  color: #00BFFF; 
 }
 
 .tab_item {
   width: 400px;
   height: 300px;
   padding: 5px;
-  background-color: #E0F2F7;
+  /*background-color: #E0F2F7;*/
 }
 /*-------語学試験中身-------*/
 .foto-DSH {
@@ -454,25 +486,33 @@ a {
     position: relative;
 }
 #item1 {
-    padding-top: 30px;
-    height: 1100px;
+    padding-top: 80px;
+    height: 1350px;
+    background-color: #ff7f50;
+    font-weight: bold; 
 }
 
 .DSHli {
-  color: black;
-  border-left: solid 8px #008080;
-  background: white;
-  width: 500px;
-  margin-bottom: 5px;
-  line-height: 30px;
-  border-radius: 0 15px 15px 0;
-  padding: 10px;
-  list-style-type: none!important;
+  color: #ff7f50;
+  margin-left: 30px;
+  font-size: 40px;
+  font-weight: bolder; 
+  padding-top: 30px;
+}
+.dshmerkmal{
+    box-shadow: inset 0 0 15px 15px white;
+    background-color: white;
+    border-radius: 50px;
 }
 .DSHtext {
     margin: 30px;
     margin-top: 15px;
     margin-bottom: 40px;
+}
+.dshstr{
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 20px;
 }
 .li-DSH-struktur {
 	list-style-type: disc;
@@ -482,6 +522,7 @@ a {
 .DSHtext2 {
     margin-top: 15px;
     margin-left: 10px;
+    font-weight: bold; 
 }
 .DSHtext3 {
     margin-top: 15px;
@@ -489,10 +530,19 @@ a {
 }
 .DSHtext4 {
     margin-bottom: 40px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.dshbestehe{
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 20px;
+    padding-bottom: 30px;
 }
 #item2 {
     padding-top: 30px;
     height: 1100px;
+    background-color: #f9d56e;
 }
 .testdafli {
   color: black;
@@ -508,6 +558,7 @@ a {
 #item3 {
     padding-top: 30px;
     height: 1100px;
+    background-color: #ff6347;
 }
 .telcli {
   color: black;
@@ -523,6 +574,7 @@ a {
 #item4 {
     padding-top: 30px;
     height: 1100px;
+    background-color: #f92;
 }
 .goetheli {
   color: black;

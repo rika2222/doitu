@@ -43,7 +43,7 @@ $(function () {
         $indicator.html(indicatorHTML);
 
 
-    // 髢｢謨ｰ縺ｮ螳夂ｾｩ
+    // 髢｢謨ｰ��ｮ螳夂ｾｩ
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         // 莉ｻ諢上�繧ｹ繝ｩ繧､繝峨ｒ陦ｨ遉ｺ縺吶ｋ髢｢謨ｰ
@@ -168,7 +168,10 @@ $(function () {
         // 繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ繧､繝吶Φ繝医ｒ逋ｺ逕溘＆縺帙∝�譛滉ｽ咲ｽｮ繧呈ｱｺ螳
         $window.trigger('scroll');
     });
- 
+    
+    
+    
+ //たぶ
   // ①タブをクリックしたら発動
   $('.tab li').click(function() {
  
@@ -247,10 +250,12 @@ function get_selected_input_items(name) {
 	});
 	return searchData;
 }
-// google map
+
+// ---------------------------google map-----------------------------------
 var map;
 var markerD = [];
 var marker = [];
+var mark;
 var infoWindow = [];
 var openWindow;
 
@@ -258,32 +263,11 @@ function initMap() {
     //マップ初期表示の位置設定
     var target = document.getElementById('target');
     
-    navigator.geolocation.getCurrentPosition(
-        function(position) {
-            // 現在地の緯度経度所得
-            lat = position.coords.latitude;
-            lng = position.coords.longitude;
-            
-            var centerp = {lat: lat, lng: lng};
-            
-            //マップ表示
-            map = new google.maps.Map(target, {
-                center: centerp,
-                zoom: 10,
-            });
-            
-            // マーカーの新規出力
-            new google.maps.Marker({
-                map: map,
-                position: centerp,
-                icon: {
-            		path: 'M -8,-8 8,8 M 8,-8 -8,8',     //座標（×）
-            		strokeColor: "#000000",              //線の色
-            		strokeWeight: 4.0                    //線の太さ
-            	}
-            });
-        }
-    );  
+    //マップ表示
+    map = new google.maps.Map(target, {
+        center:  {lat: 50.961125, lng: 10.307232},
+        zoom: 7,
+    });
 }
 
 
@@ -310,49 +294,73 @@ function setMarker(markerData) {
     var icon;
     
     for (var i = 0; i < markerData.length; i++) {
-        console.log(i + "番目：" + markerData[i]['address'] + "/" + markerData[i]['lat'] + "/" + markerData[i]['lng']);
-
-        var latNum = parseFloat(markerData[i]['lat']);
-        var lngNum = parseFloat(markerData[i]['lng']);
-        // マーカー位置セット
-        var markerLatLng = new google.maps.LatLng({
-            lat: latNum,
-            lng: lngNum
-        });
-        
-        
-        // マーカーのセット
-        marker[i] = new google.maps.Marker({
-            position: markerLatLng,          // マーカーを立てる位置を指定
-            map: map,                        // マーカーを立てる地図を指定
-            // icon: {
-            //     url: 'spot.png',
-            //     size : new google.maps.Size(19, 25)
-            // }
-        });
-        
-        // 吹き出しの追加
-        infoWindow[i] = new google.maps.InfoWindow({
-            content: markerData[i]['year'] + '/' + markerData[i]['month'] + '/' + markerData[i]['day'] + ':　'+ markerData[i]['exam_name'] + '<br><br>' +'<a href="' + markerData[i]['url'] + '" target="_blank">' + markerData[i]['address'] + '</a>'
-        });
         // サイドバー
         
-        sidebar_html +=  '● '+ '<a href="javascript:myclick(' + i + ')">' + markerData[i]['exam_name'] + '<\/a><br />';
+        sidebar_html +=  '<span class="map-ls" art="'+ markerData[i]['art'] +'">● ' + '<a href="javascript:myclick(' + i + ')">' + markerData[i]['name'] + '<\/a><br /></span>';
+    // マーカーのセット
+    // draw_by_address(markerData[i]['adresse']);
+    // console.log(markerData[i]['adresse']);
+    // mark[i] = new google.maps.Marker({
+    //     map: map                // マーカーを立てる地図を指定
+    // });
+    myclick(i);
         // マーカーにクリックイベントを追加
-        markerEvent(i);
+        // markerEvent(i);
     }
+    mark = new google.maps.Marker({
+        map: map                // マーカーを立てる地図を指定
+    });
     
    // Marker clusterの追加
-    var markerCluster = new MarkerClusterer(
-        map,
-        marker,
-        {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
-    );
+    // var markerCluster = new MarkerClusterer(
+    //     map,
+    //     marker,
+    //     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
+    // );
     
     // サイドバー
     document.getElementById("sidebar").innerHTML = sidebar_html;
 }
 
+// var geocoder = new google.maps.Geocoder();
+// function draw_by_address(input_address){
+//     geocoder.geocode({
+//       'address':  input_address
+//   }, function(results, status) { // 結果
+//         if (status === google.maps.GeocoderStatus.OK) { // ステータスがOKの場合
+//         console.log("ok");
+//         //   map = new google.maps.Map(document.getElementById('map'), {
+//         //         center: results[0].geometry.location, // 地図の中心を指定
+//         //       zoom: 15 // 地図のズームを指定
+//         //   });
+//         //  marker = new google.maps.Marker({
+//         //       position: results[0].geometry.location, // マーカーを立てる位置を指定
+//         //         map: map // マーカーを立てる地図を指定
+//         //   });
+//         //   infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
+//         //     content:"<div class='maker'>" + input_address + "</div>" // 吹き出しに表示する内容
+//         //     });
+//         //     //marker.addListener('click', function() { // マーカーをクリックしたとき
+//         //     infoWindow.open(map, marker); // 吹き出しの表示
+//         //     //});  
+//         //     var address = document.getElementById("address");
+//         //     address.value = input_address; 
+//             var latlng = results[0].geometry.location;
+//             console.log(latlng);
+//             // return latlng;
+//             // var glat = latlng.lat();
+//             // var glng = latlng.lng();
+            
+//             // var lat = document.getElementById("lat");
+//             // var lng = document.getElementById("lng");
+//             // lat.value = glat;
+//             // lng.value = glng;
+//      } else { // 失敗した場合
+//      console.log("ng");
+//         //   alert(status);
+//       }
+//   });
+// }
 
 function markerEvent(i) {
     marker[i].addListener('click', function() {
@@ -361,9 +369,74 @@ function markerEvent(i) {
 }
 
 function myclick(i) {
-    if(openWindow){
-        openWindow.close();
-    }
-    infoWindow[i].open(map, marker[i]);
-    openWindow = infoWindow[i];
+    var latNum, lngNum;
+
+    $.ajax({
+        type: "GET",
+        url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + markerD[i]['name'] + "&key=AIzaSyALg70uaMcYjkzto9oPmiXyODIXCvpvAzg",
+        dataType: "json",
+        success: function(data){
+            latNum = data['results'][0]['geometry']['location']['lat']
+            lngNum = data['results'][0]['geometry']['location']['lng']
+            // マーカー位置セット
+            var markerLatLng = new google.maps.LatLng({
+                lat: latNum,
+                lng: lngNum
+            });
+            
+            var color
+            switch (markerD[i]['art']) {
+                case 'DSH':
+                    color = 'blue'
+                    break;
+                case 'TestDaF':
+                    color = 'red'
+                    break;
+                case 'Telc':
+                    color = 'green'
+                    break;
+                case 'Goethe ':
+                    color = 'yellow'
+                    break;
+                default:
+                    color = 'white'
+                    break;
+            }
+        
+            
+            
+            // マーカーのセット
+            mark.setPosition(markerLatLng)
+            mark.setIcon({url: 'http://maps.google.com/mapfiles/ms/icons/' + color + '-dot.png'})
+            // 吹き出しの追加
+            infoWindow[i] = new google.maps.InfoWindow({
+                content:  markerD[i]['tag'] + ':　'+ markerD[i]['art'] + '<br><br>' +'<a href="' + markerD[i]['url'] + '" target="_blank">' + markerD[i]['name'] + '</a>'
+            });
+        
+            if(openWindow){
+                openWindow.close();
+            }
+            infoWindow[i].open(map, mark);
+            openWindow = infoWindow[i];
+        }
+    });
 }
+
+$(function() {
+  $('.map-cb').on('click', function(e) {
+    arr = []
+    $('.map-ls').show()
+    $('.map-cb').each(function(f){
+        if($('.map-cb')[f].checked){
+            arr.push($('.map-cb')[f].name)
+        }
+    })
+    if(arr.length != 0){
+        $('.map-ls').each(function(g) {
+            if(!arr.includes($($('.map-ls')[g]).attr('art'))){
+                $($('.map-ls')[g]).hide()
+            }
+        })
+    }
+  })  
+})
