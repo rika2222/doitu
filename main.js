@@ -43,7 +43,7 @@ $(function () {
         $indicator.html(indicatorHTML);
 
 
-    // 髢｢謨ｰ��ｮ螳夂ｾｩ
+    // 髢｢謨ｰ���ｮ螳夂ｾｩ
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         // 莉ｻ諢上�繧ｹ繝ｩ繧､繝峨ｒ陦ｨ遉ｺ縺吶ｋ髢｢謨ｰ
@@ -156,7 +156,7 @@ $(function () {
         // 繧ｳ繝ｳ繝�リ繝ｼ繧 body 縺ｫ謖ｿ蜈･
         $headerCloneContainer.appendTo('body');
 
-        // 繧ｹ繧ｯ��ｭ繝ｼ繝ｫ譎ゅ↓蜃ｦ逅�ｒ螳溯｡後☆繧九′縲∝屓謨ｰ繧 1 遘帝俣縺ゅ◆繧 30 縺ｾ縺ｧ縺ｫ蛻ｶ髯
+        // 繧ｹ繧ｯ���ｭ繝ｼ繝ｫ譎ゅ↓蜃ｦ逅�ｒ螳溯｡後☆繧九′縲∝屓謨ｰ繧 1 遘帝俣縺ゅ◆繧 30 縺ｾ縺ｧ縺ｫ蛻ｶ髯
         $window.on('scroll', $.throttle(1000 / 15, function () {
             if ($window.scrollTop() > threshold) {
                 $headerCloneContainer.addClass('visible');
@@ -169,7 +169,28 @@ $(function () {
         $window.trigger('scroll');
     });
     
-    
+    //スムーズなスクロール
+    jQuery(function(){
+    // var headerHight = 80; //ヘッダーの高さをpx指定
+    jQuery('a[href^=#]').click(function(){
+    var href= jQuery(this).attr("href");
+    var target = jQuery(href == "#" || href == "" ? 'body' : href);
+    var position = target.offset().top-headerHight;
+    jQuery("html, body").animate({scrollTop:position}, 550, "swing");
+    return false;
+    });
+    //*ページ外リンクの指定*/      
+    var url = jQuery(location).attr('href');
+    if (url.indexOf("?id=") == -1) {
+    // ほかの処理
+    }else{
+    var url_sp = url.split("?id=");
+    var hash     = '#' + url_sp[url_sp.length - 1];
+    var target2= jQuery(hash);
+    var position2= target2.offset().top-headerHight;
+    jQuery("html, body").animate({scrollTop:position2}, 550, "swing");
+    }
+    });
     
  //たぶ
   // ①タブをクリックしたら発動
@@ -295,7 +316,7 @@ function setMarker(markerData) {
     for (var i = 0; i < markerData.length; i++) {
         // サイドバー
         
-        sidebar_html +=  '<span class="map-ls" art="'+ markerData[i]['art'] +'">● ' + '<a href="javascript:myclick(' + i + ')">' + markerData[i]['name'] + '<\/a><br /></span>';
+        sidebar_html +=  '<span class="map-ls" tag="' + markerData[i]['tag'].substring(3, 5) + '" art="'+ markerData[i]['art'] +'">● ' + '<a href="javascript:myclick(' + i + ')">' + markerData[i]['name'] + '<\/a><br /></span>';
         // マーカーのセット
         // draw_by_address(markerData[i]['adresse']);
         // console.log(markerData[i]['adresse']);
@@ -402,22 +423,56 @@ function myclick(i) {
     openWindow = infoWindow[i];
 }
 
+var map_arr = []
+var tag_arr = []
+//地図フィルター種類
 $(function() {
   $('.map-cb').on('click', function(e) {
-    arr = []
+    map_arr = []
     $('.map-ls').show()
     $('.map-cb').each(function(f){
         if($('.map-cb')[f].checked){
-            arr.push($('.map-cb')[f].name)
+            map_arr.push($('.map-cb')[f].name)
         }
     })
-    if(arr.length != 0){
+    if(map_arr.length != 0){
         $('.map-ls').each(function(g) {
-            if(!arr.includes($($('.map-ls')[g]).attr('art'))){
+            if(!map_arr.includes($($('.map-ls')[g]).attr('art'))){
+                $($('.map-ls')[g]).hide()
+            }
+        })
+    }
+    if(tag_arr.length != 0){
+        $('.map-ls').each(function(g) {
+            if(!tag_arr.includes($($('.map-ls')[g]).attr('tag'))){
                 $($('.map-ls')[g]).hide()
             }
         })
     }
   })
-
+  
+    //地図フィルター月
+$('.tag-cb').on('click', function(e) {
+    tag_arr = []
+    $('.map-ls').show()
+    $('.tag-cb').each(function(f){
+        if($('.tag-cb')[f].checked){
+            tag_arr.push($('.tag-cb')[f].value)
+        }
+    })
+    if(map_arr.length != 0){
+        $('.map-ls').each(function(g) {
+            if(!map_arr.includes($($('.map-ls')[g]).attr('art'))){
+                $($('.map-ls')[g]).hide()
+            }
+        })
+    }
+    if(tag_arr.length != 0){
+        $('.map-ls').each(function(g) {
+            if(!tag_arr.includes($($('.map-ls')[g]).attr('tag'))){
+                $($('.map-ls')[g]).hide()
+            }
+        })
+    }
+  })
 })

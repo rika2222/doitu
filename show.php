@@ -63,7 +63,7 @@
  
             $stmt = $pdo->prepare('UPDATE fragens set antwort=:antwort where id = :id');
             if($fragen['antwort'] != null){
-                $final_antwort = $fragen['antwort'] . '<br>' . $antwort;
+                $final_antwort = $fragen['antwort'] . '<br>・' . $antwort;
             } else {
                 $final_antwort = $antwort;
             }
@@ -153,12 +153,12 @@
                     <!-- 1行 -->
                     <div class="form-group row">
                         <div class="offset-sm-2 col-sm-1">
-                            <button type="submit" class="btn btn-primary">更新</button>
+                            <button type="submit" class="btn btn-warning">更新</button>
                         </div>
                     </div>
                 </form>
              <div class="row mt-5">
-                <a href="index.php#fragens" class="btn btn-primary">戻る</a>
+                <a href="index.php#fragens" class="btn btn-warning">戻る</a>
             </div>
         </div>
         

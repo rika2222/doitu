@@ -176,7 +176,7 @@ img { vertical-align: middle; }
 
 /* Sticky header (clone) */
 .page-header-clone {
-    background-color: rgb(0, 0, 0);
+    background-color: #ffd;
     opacity: 0.9;
     position: fixed;
     top: -48px;
@@ -209,7 +209,7 @@ img { vertical-align: middle; }
 .page-header-clone .site-logo a:before {
     content: "";
     display: inline-block;
-    background-image: url(200921logoklein.png);
+    background-image: url(20200919logo1.png);
     background-size: contain;
     vertical-align: middle;
     width: 50%;   
@@ -409,9 +409,11 @@ img { vertical-align: middle; }
 }
 .sprachtesth1 {
     padding-top: 80px;
+    font-weight: bolder; 
 }
 .sprachtestp {
     padding-bottom: 80px;
+    font-weight: bold; 
 }
 .tab_item {
   display: none;
@@ -423,7 +425,6 @@ img { vertical-align: middle; }
 
 /* aタグをブロック要素にする。文字色は親クラスと同様に、下線は消す */
 a {
-  display: block;
   color: inherit;
   text-decoration: none;
 }
@@ -447,19 +448,23 @@ a {
     margin-left: 5%;
     background-color: #ff7f50;
     opacity: 0.8;
+    cursor: pointer;
 }
 .tabu2{
     background-color: #f9d56e;
     opacity: 0.8;
+    cursor: pointer;
 }
 .tabu3{
     background-color: #ff6347;
     opacity: 0.8;
+    cursor: pointer;
 }
 .tabu4{
     background-color: #f92;
     opacity: 0.8;
     margin-right: 5%;
+    cursor: pointer;
 }
 
 .is-active-btn {
@@ -476,6 +481,7 @@ a {
 /*-------語学試験中身-------*/
 .foto-DSH {
     padding: 80px;
+    padding-top: 100px;
 }
 .foto-DSHa {
     display: inline-block;
@@ -486,8 +492,8 @@ a {
     position: relative;
 }
 #item1 {
-    padding-top: 80px;
-    height: 1350px;
+    padding-top: 30px;
+    height: 1050px;
     background-color: #ff7f50;
     font-weight: bold; 
 }
@@ -500,19 +506,24 @@ a {
   padding-top: 30px;
 }
 .dshmerkmal{
-    box-shadow: inset 0 0 15px 15px white;
     background-color: white;
     border-radius: 50px;
+    padding-bottom: 30px;
 }
 .DSHtext {
     margin: 30px;
     margin-top: 15px;
     margin-bottom: 40px;
+    color: black;
+}
+.p1 {
+    color: black;
 }
 .dshstr{
     background-color: white;
     border-radius: 50px;
     margin-top: 20px;
+    width: 48%;
 }
 .li-DSH-struktur {
 	list-style-type: disc;
@@ -541,77 +552,167 @@ a {
 }
 #item2 {
     padding-top: 30px;
-    height: 1100px;
+    height: 910px;
     background-color: #f9d56e;
 }
+.r21 {
+    height: 360px;
+}
+.foto-DSH {
+    padding-top: 30px;
+}
 .testdafli {
-  color: black;
-  border-left: solid 8px #008080;
-  background: white;
-  width: 500px;
-  margin-bottom: 5px;
-  line-height: 30px;
-  border-radius: 0 15px 15px 0;
-  padding: 10px;
-  list-style-type: none!important;
+    color: #f9d56e;
+    margin-left: 30px;
+    font-size: 40px;
+    font-weight: bolder; 
+    padding-top: 30px;
+}
+.TDmerkmsl {
+    background-color: white;
+    border-radius: 50px;
+    height: 350px;
+}
+.testdaftext {
+    margin: 30px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    font-weight: bold; 
+}
+.testdastr {
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+.testdaftext3 {
+    font-weight: bold; 
+}
+.testdafbesthe {
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+.testdaftext5 {
+    font-weight: bold; 
 }
 #item3 {
     padding-top: 30px;
-    height: 1100px;
+    height: 900px;
     background-color: #ff6347;
 }
 .telcli {
-  color: black;
-  border-left: solid 8px #008080;
-  background: white;
-  width: 500px;
-  margin-bottom: 5px;
-  line-height: 30px;
-  border-radius: 0 15px 15px 0;
-  padding: 10px;
-  list-style-type: none!important;
+    color: #ff6347;
+    margin-left: 30px;
+    font-size: 40px;
+    font-weight: bolder; 
+    padding-top: 30px;
+}
+.telcmerkmal{
+    background-color: white;
+    border-radius: 50px;
+    height: 470px;
+}
+.telctext {
+    font-weight: bold; 
+}
+.telcstr{
+   background-color: white;
+   border-radius: 50px; 
+}
+.telcbestehe {
+   background-color: white;
+   border-radius: 50px; 
 }
 #item4 {
     padding-top: 30px;
-    height: 1100px;
+    height: 670px;
     background-color: #f92;
 }
+.r24 {
+    height: 370px;
+}
 .goetheli {
-  color: black;
-  border-left: solid 8px #008080;
-  background: white;
-  width: 500px;
-  margin-bottom: 5px;
-  line-height: 30px;
-  border-radius: 0 15px 15px 0;
-  padding: 10px;
-  list-style-type: none!important;
+    color: #f92;
+    margin-left: 30px;
+    font-size: 40px;
+    font-weight: bolder; 
+    padding-top: 30px;
+}
+.goethemerkmal {
+    background-color: white;
+    border-radius: 50px;
+    height: 300px;
+}
+.goethestr {
+    background-color: white;
+    border-radius: 50px;   
+}
+.goethebesthe {
+    background-color: white;
+    border-radius: 50px;
+}
+.goethetext {
+    font-weight: bold; 
+    padding-left: 40px;
+    padding-right: 40px;
 }
 /*--------フィルター-----------*/
 .search-box_label {
 	font-weight: bold;
+	color: #ff7f50;
 }
-.is-hide {
-	display: none;
+.filtermaturi {
+    color: #ffd;
+    font-weight: bold;
+    position: absolute;
+    z-index: 40;
 }
-.testli {
-  color: black;
-  border-left: solid 8px #008080;
-  background: white;
-  width: 300px;
-  margin-bottom: 5px;
-  line-height: 30px;
-  border-radius: 0 15px 15px 0;
-  padding: 10px;
+.circle-11 {
+  background: #f66;
+  opacity: 0.8;
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+  animation: border-animation 6s infinite linear;
+  z-index: 20;
+  position: absolute; top: -22px; left: 0px; width: 80px; height: 80px; 
+}
+.circle-12 {
+  background: #f92;
+  opacity: 0.8;
+  animation: border-animation 4s infinite linear;
+  border-radius: 60% 40% 50% 40%/30% 50% 60% 50%;
+  position: absolute; top: -22px; left: 116px; width: 80px; height: 80px;
+  z-index: 5; 
+}
+.circle-13 {
+  background: #ffa500;
+  opacity: 0.8;
+  animation: border-animation 6s infinite linear;
+  border-radius: 60% 40% 50% 40%/30% 50% 60% 50%;
+  position: absolute; top: -22px; left: 168px; width: 80px; height: 80px;
+  z-index: 5; 
+}
+.circle-14 {
+  background: #fc2;
+  opacity: 0.8;
+  animation: border-animation 6s infinite linear;
+  border-radius: 60% 40% 50% 40%/30% 50% 60% 50%;
+  position: absolute; top: -22px; left: 57px; width: 80px; height: 80px;
+  z-index: 5; 
 }
 .ttest {
-    background-color: #BAD3FF;
+    background-color: #ffd;
     padding-top: 100px;
-    height: 1100px;
+    height: 1000px;
+}
+.map-cb {
+    color: #ff7f50;
 }
 .list {
     overflow: scroll;
-    height: 950px;
+    height: 500px;
+    padding-top: 50px;
+    margin-top: 50px;
 }
 .list_item {
 	list-style-type: disc;
@@ -619,11 +720,49 @@ a {
 	text-align: left;
 }
 .search-box {
-    padding: 50px;
+    padding: 5px;
 }    
+.filterrecht {
+    padding-top: 80px;
+}
+/*----------------googlemap------------------*/
+.maph1{
+    color: red;
+    border: solid 2px red;
+    border-radius: 30px;
+    padding: 10px;
+}
+#target {
+    border: 1px outset gray;
+    width: 1000px;
+    height: 650px;
+    margin-top: 15px;
+}
+#sidebar {
+    border: 1px solid #666;
+    padding: 6px;
+    margin-top: 10px;
+    background-color: white;
+    font-family: Meriyo UI;
+    font-size: 12px;
+    overflow: auto;
+    width: 300px;
+    height: 786px;
+}
+.icon {
+    width: 200px;
+}
+/*.btn-primary {*/
+/*    color: #ff6347;*/
+/*}*/
 /*-----------ビサ-----------------*/
 .visumerk{
     margin: 100px;
+    margin-top: 0px;
+}
+.visumh1 {
+    font-weight: bolder;
+    /*color: #f66;*/
 }
 .visump{
     width: 80%;
@@ -673,7 +812,7 @@ a {
   border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
 }
 .visum {
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   padding: 20px;
   background: #ffd;
@@ -697,46 +836,42 @@ a {
 /*.visum4 {*/
 /*    background-color: #B1F9D0;*/
 /*}*/
-/*----------------googlemap------------------*/
-.maph1{
-    color: red;
-    border: solid 2px red;
-    border-radius: 30px;
-    padding: 10px;
-}
-#target {
-    border: 1px outset gray;
-    width: 950px;
-    height: 800px;
-}
-#sidebar {
-    border: 1px solid #666;
-    padding: 6px;
-    background-color: white;
-    font-family: Meriyo UI;
-    font-size: 12px;
-    overflow: auto;
-    width: 237px;
-    height: 786px;
-}
-.icon{
-    width: 200px;
-}
+
 /*----------質問コーナー-----------------*/
 #fragens {
     padding-bottom: 50px;
+    background-color: #f92;
+}
+.fragensh2 {
+    font-weight: bolder;
+    color: #ffd;
+}
+.form-group {
+    color: #ffd;
+    font-weight: bolder;
 }
 .mt-2 {
-    background-color: #CCCCFF;
+    background-color: #f92;
     padding: 40px;
     margin-top: 0px;
+    /*background: linear-gradient( #ffd 5%, #f92 95%);*/
 }
 .tabel {
-    background-color: #CCCCFF;
+    background-color: #f92;
     padding-bottom: 500px;
     margin-top: 0px;
 }
+th {
+    color: #ffd;
+    font-weight: bolder;
+}
+.pagetop {
+    font-weight: bold;
+    margin-top: 100px;
+}
 /*-------------show.php----------------*/
 .show {
-    background-color: #CCCCFF;
+    background-color: #f92;
+     color: #ffd;
+    font-weight: bolder;
 }

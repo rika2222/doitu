@@ -88,12 +88,13 @@
     <script src="jquery-ui-1.10.3.custom.min.js"></script>
     <script src="jquery.ba-throttle-debounce.min.js"></script>
     <script src="jquery.smooth-scroll.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <script src="main.js"></script>
 
 </head>
     <body>
         <div class="container-fluid">
-            <header class="hero-header">
+            <header id="hero-header">
                 <div class="slideshow">
                     <div class="slideshow-slides">
                         <a href="./" class="slide" id="slide-1"><img src="student.jpg" alt="" width="1600" height="580"></a>
@@ -114,11 +115,11 @@
                     <h1 class="site-logo"><a href="./"><img src="20200919logo1.png" alt="ドイツ留学ナビ" height="60" width="200"></a></h1>
                     <nav class="primary-nav" role="navigation">
                         <ul>
-                            <li><a href="#Text1">自己紹介</a></li>
-                            <li><a href="#verfahren">留学までにやること</a></li>
-                            <li><a href="#sprachdiv">語学試験</a></li>
-                            <li><a href="#visum">ビザ取得</a></li>
-                            <li><a href="#fragens">質問コーナー</a></li>
+                            <li><a href="#Text1"><font color="#ffa500">自己紹介</a></li>
+                            <li><a href="#verfahren"><font color="#ffa500">留学までにやること</a></li>
+                            <li><a href="#sprachdiv"><font color="#ffa500">語学試験</a></li>
+                            <li><a href="#visum"><font color="#ffa500">ビザ取得</a></li>
+                            <li><a href="#fragens"><font color="#ffa500">質問コーナー</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -183,75 +184,75 @@
             </div>
             <div class="row">
                 <div class="col-md-12 tab_item is-active-item" id="item1">
-                    <div class="row">
-                        <div class="offset-md-1 col-md-4 foto-DSH">
-                            <a class="foto-DSHa" href="./"><img src="200927foto-DSH.jpg" alt="foto-DSH" height="150" width="300"></a>
-                        </div>
-                        <div class="col-md-7">
-                            <ul class="float-right">
-                                <div class="row">
-                                    <div class="col-md-12 dshmerkmal">
-                                        <li class="DSHli">DSHの特徴</li>
-                                        <p class="DSHtext">
-                                            ドイツの大学入学を目指す外国人向けの語学試験です。
-                                            各大学が主催し作成しているためドイツ国内でしか受験できず、難易度にばらつきがあります。
-                                            対策も各試験の過去問ホームぺジからダウンロードしそれぞれ行わなければなりません。
-                                            合格すれば一定のドイツ語能力を示せるので、受験した大学だけでなくドイツ全国の大学に応募することができます。
-                                            向き不向きがあるので一概には言えませんが大抵の場合TestDafなど他の語学試験に比べてDSH試験は難易度が低くく、
-                                            受験料は80€程度で比較的安く受験できます。
-                                            試験は２日に分けられており、読解・聴解・筆記に合格した人のみ違う日に開催される口頭試験を受けられるようです。
-                                            結果も一週間以内にわかる場合がほとんどです。
-                                            デメリットとして年に各大学で１、２回しか開催されておらず、外部受験だと定員がすぐに埋まってしまって受験しにくい点があります。
-                                            大学の語学準備コースなど、卒業試験としてDSHを受けられる公立の語学学校でしっかりと対策をしつつ受験することをおすすめします。
-                                            またDSH試験を受験できる私立の語学学校だとC1コースの授業料とDSH試験の受験料合わせて1000€近くかかることもありますし、
-                                            DSH試験を受験できない大学の語学準備コースもあるので注意しなければなりません。<br>
-                                            私の感覚ではこのDSH試験で語学証明をして入学した外国人が一番多いと思います。
-                                        </p>
-                                    </div>
-                                    <div class="col-md-12 dshstr">
-                                        <li class="DSHli">試験の構成</li>
-                                        <h4 class="DSHtext2">
-                                            筆記試験（一次試験）
-                                        </h4>
-                                        <ul class="DSHtext3">
-                                            <li class="li-DSH-struktur">Leseverstehen(読解)</li>
-                                            <li class="li-DSH-struktur">Hörverstehen(聞き取り)</li>
-                                            <li class="li-DSH-struktur">Textproduktion(作文)</li>
-                                            <li class="li-DSH-struktur">Wissenschaftssprachliche Strukturen(文法問題)</li>
-                                        </ul>
-                                        <br>
-                                        <h4 class="DSHtext2">
-                                            口頭試験（二次試験）
-                                        </h4>
-                                        <ul class="DSHtext4">
-                                            <li class="li-DSH-struktur">自己紹介・大学の志望動機・テストを受けた感想</li>
-                                            <li class="li-DSH-struktur">専門分野に関連する文章の要約と質疑応答・事前に渡される15行程度の記事に対する質疑応答など</li>
-                                        </ul>
-                                    </div> 
-                                    <div class="col-md-12 dshbestehe">
-                                        <li class="DSHli">合格基準</li>
-                                        <p>筆記試験、口述試験共に57％以上正答した場合が合格とされます。 57％以上の合格者は、筆記＋口述の正答率によって次の3段階評価が与えられます。</p>
-                                        <ul class="DSHtext5">
-                                            <li class="li-DSH-bestehen">DSH1 (57％〜66%) 音楽など芸術系の学部には応募できることもあります</li>
-                                            <li class="li-DSH-bestehen">DSH2 (67％〜81%)　大抵の学部に応募できます</li>
-                                            <li class="li-DSH-bestehen">DSH3 (82％〜100%)　医学部を含む全ての学部に応募できます</li>
-                                        </ul>
-                                    </div>
+                    <ul class="float-right">
+                        <div class="row">
+                            <div class="offset-md-1 col-md-4 foto-DSH">
+                                <a class="foto-DSHa" href="./"><img src="200927foto-DSH.jpg" alt="foto-DSH" height="150" width="300"></a>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="col-md-12 dshmerkmal">
+                                    <li class="DSHli">DSHの特徴</li>
+                                    <p class="DSHtext">
+                                        ドイツの大学入学を目指す外国人向けの語学試験です。
+                                        各大学が主催し作成しているためドイツ国内でしか受験できず、難易度にばらつきがあります。
+                                        対策も各試験の過去問ホームぺジからダウンロードしそれぞれ行わなければなりません。
+                                        合格すれば一定のドイツ語能力を示せるので、受験した大学だけでなくドイツ全国の大学に応募することができます。
+                                        向き不向きがあるので一概には言えませんが大抵の場合TestDafなど他の語学試験に比べてDSH試験は難易度が低くく、
+                                        受験料は80€程度で比較的安く受験できます。
+                                        試験は２日に分けられており、読解・聴解・筆記に合格した人のみ違う日に開催される口頭試験を受けられるようです。
+                                        結果も一週間以内にわかる場合がほとんどです。
+                                        デメリットとして年に各大学で１、２回しか開催されておらず、外部受験だと定員がすぐに埋まってしまって受験しにくい点があります。
+                                        大学の語学準備コースなど、卒業試験としてDSHを受けられる公立の語学学校でしっかりと対策をしつつ受験することをおすすめします。
+                                        またDSH試験を受験できる私立の語学学校だとC1コースの授業料とDSH試験の受験料合わせて1000€近くかかることもありますし、
+                                        DSH試験を受験できない大学の語学準備コースもあるので注意しなければなりません。<br>
+                                        私の感覚ではこのDSH試験で語学証明をして入学した外国人が一番多いと思います。
+                                    </p>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="offset-md-1 col-md-6 dshstr">
+                                    <li class="DSHli">試験の構成</li>
+                                    <h4 class="DSHtext2">
+                                        筆記試験（一次試験）
+                                    </h4>
+                                    <ul class="DSHtext3 p1">
+                                        <li class="li-DSH-struktur">Leseverstehen(読解)</li>
+                                        <li class="li-DSH-struktur">Hörverstehen(聞き取り)</li>
+                                        <li class="li-DSH-struktur">Textproduktion(作文)</li>
+                                        <li class="li-DSH-struktur">Wissenschaftssprachliche Strukturen(文法問題)</li>
+                                    </ul>
+                                    <br>
+                                    <h4 class="DSHtext2">
+                                        口頭試験（二次試験）
+                                    </h4>
+                                    <ul class="DSHtext4">
+                                        <li class="p1 li-DSH-struktur">自己紹介・大学の志望動機・テストを受けた感想</li>
+                                        <li class="p1 li-DSH-struktur">専門分野に関連する文章の要約と質疑応答・事前に渡される15行程度の記事に対する質疑応答など</li>
+                                    </ul>
+                                </div> 
+                                <div class="offset-md-1 col-md-4 dshbestehe">
+                                    <li class="DSHli">合格基準</li>
+                                    <br>
+                                    <p class="p1">筆記試験、口述試験共に57％以上正答した場合が合格とされます。 57％以上の合格者は、筆記＋口述の正答率によって次の3段階評価が与えられます。</p>
+                                    <ul class="DSHtext5">
+                                        <li class="p1 li-DSH-bestehen"> DSH1 (57％〜66%) 音楽など芸術系の学部には応募できることもあります</li>
+                                        <li class="p1 li-DSH-bestehen"> DSH2 (67％〜81%)　大抵の学部に応募できます</li>
+                                        <li class="p1 li-DSH-bestehen"> DSH3 (82％〜100%)　医学部を含む全ての学部に応募できます</li>
+                                    </ul>
                                 </div>    
-                            </ul>    
-                        </div>    
-                    </div>        
+                            </div>    
+                        </div>
+                    </ul>     
                 </div>
                 <div class="col-md-12 tab_item" id="item2">
-                    <div class="row">
-                        <div class="offset-md-1 col-md-4 foto-DSH">
-                            <a class="foto-DSHa" href="./"><img src="201002testdaf.jpg" alt="foto-testdaf" height="300" width="300"></a>
-                        </div>
-                        <div class="col-md-7">
-                            <ul class="float-right">
-                                <div class=""
+                    <ul class="float-right">
+                        <div class="row r21">
+                            <div class="offset-md-1 col-md-4 foto-DSH">
+                                <a class="foto-DSHa" href="./"><img src="201002testdaf.jpg" alt="foto-testdaf" height="300" width="300"></a>
+                            </div>
+                            <div class="col-md-7 TDmerkmsl">
                                 <li class="testdafli">TestDafの特徴</li>
-                                <p class="testdaftext">
+                                <p class="p1 testdaftext">
                                     TestDaFとは、ドイツ語能力を証明するための語学能力試験で、ドイツの大学応募時に必要なドイツ語能力証明書だけでなく、就職活動にも有効な試験です。
                                     年に５、６回様々な語学学校で同じ日に開催されています。人気なテストで受験資格も先着順なので定員オーバーになることが多くありますが、
                                     申し込み開始日の開始時間に申し込めば大抵の場合受験資格をもらうことができるのでそも日は戦いのつもりで頑張りましょう！
@@ -259,48 +260,52 @@
                                     一度合格すると語学証明として一生使うことができますが、
                                     結果がわかるまでに６週間以上かかります。　DSH試験の次に多くの外国人が受験している印象です。
                                 </p>
+                            </div>
+                        </div>    
+                        <div class="row">
+                            <div class="offset-md-1 col-md-5 testdastr">
                                 <li class="testdafli">試験の構成</li>
                                 <ul class="testdaftext3">
-                                    <li class="li-DSH-struktur">Leseverstehen(読解)　60分</li>
-                                    <li class="li-DSH-struktur">Hörverstehen(聞き取り)　3問</li>
-                                    <li class="li-DSH-struktur">Textproduktion(作文)　60分</li>
-                                    <li class="li-DSH-struktur">mündlicher Ausdruck (口頭試験) 7問</li><br>
-                                    <p>
+                                    <li class="p1 li-DSH-struktur">Leseverstehen(読解)　60分</li>
+                                    <li class="p1 li-DSH-struktur">Hörverstehen(聞き取り)　3問</li>
+                                    <li class="p1 li-DSH-struktur">Textproduktion(作文)　60分</li>
+                                    <li class="p1 li-DSH-struktur">mündlicher Ausdruck (口頭試験) 7問</li><br>
+                                    <p class="p1">
                                         口頭試験はコンピュータで行われます。大抵の場合マイク付きのヘットフォンをして録音する形で周りの人と一斉に話始めるため、
                                         自分の世界に入って、周りの人を気にしない心の強さと準備が大切です。特に問４と問６！
                                     </p>
                                 </ul>
-                                <br>
+                            </div>
+                            <div class="offset-md-1 col-md-5 testdafbesthe">
                                 <li class="testdafli">合格基準</li>
-                                <p></p>
-                                <ul class="DSHtext5">
-                                    <li class="li-DSH-bestehen">TDN3 音楽など芸術系の学部、専門学校には応募できることもあります</li>
-                                    <li class="li-DSH-bestehen">TDN4 大抵の学部に応募できます</li>
-                                    <li class="li-DSH-bestehen">TDN5 医学部を含む全ての学部に応募できます</li>
+                                <ul class="testdaftext5">
+                                    <li class="p1 li-DSH-bestehen">TDN3 音楽など芸術系の学部、専門学校には応募できることもあります</li>
+                                    <li class="p1 li-DSH-bestehen">TDN4 大抵の学部に応募できます</li>
+                                    <li class="p1 li-DSH-bestehen">TDN5 医学部を含む全ての学部に応募できます</li>
                                 </ul>
-                                <p>
-                                    <p><例></p>
-                                    <ul class="testdaftext6">
-                                    <li class="li-DSH-struktur">Leseverstehen(読解)　3</li>
-                                    <li class="li-DSH-struktur">Hörverstehen(聞き取り)　4</li>
-                                    <li class="li-DSH-struktur">Textproduktion(作文)　4</li>
-                                    <li class="li-DSH-struktur">mündlicher Ausdruck (口頭試験) 5</li></ul><br>
-                                    のようにそれぞれの科目で結果が出ます。大抵の総合大学では「全ての科目で４以上」が求められていますが、
-                                    感覚で３割の総合大学では「合計１６」などという出願基準もありますので大学のHPを見てください。
-                                </p>
-                            </ul>    
-                        </div>    
-                    </div>        
+                                <br>
+                                <ul class="testdaftext5">
+                                    <p class="p1"><例></p>
+                                    <li class="p1 li-DSH-struktur">Leseverstehen(読解)　3</li>
+                                    <li class="p1 li-DSH-struktur">Hörverstehen(聞き取り)　4</li>
+                                    <li class="p1 li-DSH-struktur">Textproduktion(作文)　4</li>
+                                    <li class="p1 li-DSH-struktur">mündlicher Ausdruck (口頭試験) 5</li><br>
+                                    <p class="p1">のようにそれぞれの科目で結果が出ます。大抵の総合大学では「全ての科目で４以上」が求められていますが、
+                                    感覚で３割の総合大学では「合計１６」などという出願基準もありますので大学のHPを見てください。</p>
+                                </ul> 
+                            </div> 
+                        </div>
+                    </ul>    
                 </div>
                 <div class="col-md-12 tab_item" id="item3">
-                    <div class="row">
-                        <div class="offset-md-1 col-md-4 foto-DSH">
-                            <a class="foto-DSHa" href="./"><img src="201005telc.jpeg" alt="foto-telc" height="400" width="300"></a>
-                        </div>
-                        <div class="col-md-7">
-                            <ul class="float-right">
+                    <ul class="float-right">
+                        <div class="row">
+                            <div class="offset-md-1 col-md-4 foto-DSH">
+                                <a class="foto-DSHa" href="./"><img src="201005telc.jpeg" alt="foto-telc" height="400" width="300"></a>
+                            </div>
+                            <div class="col-md-7 telcmerkmal">
                                 <li class="telcli">Telc C1 Hochschuleの特徴</li>
-                                <p class="telctext">
+                                <p class="p1 telctext">
                                     Telc C1 Hochschuleは大学入学に有効な語学試験です。他にもTelcではA1からC2までのレベルの試験があり大学入学用、医学部用、移民の語学証明用、
                                     仕事や就職活動用など全部で約25種類の試験があるので目的に合った試験を受けることができます。ドイツ各地の語学学校で受験でき、多い学校
                                     では年に１２回ほど開催されるので受験資格がもらえやすいのが特徴です。受験料は語学学校によって違いますが大体200€程度で、合否は６週間〜８週間で
@@ -311,156 +316,127 @@
                                     いろいろな意見がありますが、DSHやTestdafに比べて一番Telcが難しいと思います。読解が特に難しく多くの語彙が必要で虫食いテストの文法問題があります。
                                     聞き取りは全て選択問題なので、話すのや感覚でドイツ語を使うのが苦手な、ずっとドイツ語の講義を受けて机に向かって勉強しけきた系の日本人はTestdafよりもTelcの方が向いているかもしれません。
                                     あくまで私の肌感覚ですのでご自身で最終判断してください！！
+                                </p>
+                            </div>   
+                        </div> 
+                        <div class="row">
+                            <div class="offset-md-1 col-md-6 telcstr">
                                 <li class="telcli">試験の構成</li>
-                                <ul class="telctext3">
-                                    <li class="li-DSH-struktur">Leseverstehen(読解)　90分</li>
-                                    <li class="li-DSH-struktur">Hörverstehen(聞き取り)　40分</li>
-                                    <li class="li-DSH-struktur">Textproduktion(作文)　70分</li>
-                                    <li class="li-DSH-struktur">mündlicher Ausdruck (口頭試験) 16分〜24分</li><br>
-                                    <p>
+                                <ul class="telctext">
+                                    <li class="p1 li-DSH-struktur">Leseverstehen(読解)　90分</li>
+                                    <li class="p1 li-DSH-struktur">Hörverstehen(聞き取り)　40分</li>
+                                    <li class="p1 li-DSH-struktur">Textproduktion(作文)　70分</li>
+                                    <li class="p1 li-DSH-struktur">mündlicher Ausdruck (口頭試験) 16分〜24分</li><br>
+                                    <p class="p1">
                                         口頭試験は受験者の中で二人組にを指定されて、まずは簡単な自己紹介をし、相手に２分間のプレゼンをします。
                                         内容はある事柄に対しての長所と短所だったり問題点と解決策だったり様々です。
                                         プレゼンを聞いてもう一人の人は内容を要約します。
                                         それから、ことわざや名言が書いてある紙を渡されて二人で言葉に対しての解釈や意見を議論します。
                                     </p>
                                 </ul>
-                                <br>
-                                <li class="testdafli">合格基準</li>
+                            </div>     
+                            <div class="offset-md-1 col-md-4 telcbestehe">
+                                <li class="telcli">合格基準</li>
                                 <p></p>
-                                <ul class="DSHtext5">
-                                    <li class="li-DSH-bestehen">筆記試験（読解、聞き取り、作文）：60%以上</li>
-                                    <li class="li-DSH-bestehen">口頭試験　：　60%以上</li>
+                                <ul class="telctext">
+                                    <li class="p1 li-DSH-bestehen">筆記試験（読解、聞き取り、作文）：60%以上</li>
+                                    <li class="p1 li-DSH-bestehen">口頭試験　：　60%以上</li>
                                 </ul>
-                                <p>
+                                <p  class="p1 telctext">
                                     筆記試験は読解、聞き取り、作文の３つの領域の平均で60%以上取れば良いので、例えば、読解90%・聞き取り40%
                                     ・作文60%でも平均で63%なので筆記試験合格になります。
                                 </p>
-                            </ul>    
-                        </div>    
-                    </div>        
+                            </div>   
+                        </div>  
+                    </u>    
                 </div>
                 <div class="col-md-12 tab_item" id="item4">
-                    <div class="row">
-                        <div class="offset-md-1 col-md-4 foto-DSH">
-                            <a class="foto-DSHa" href="./"><img src="201005goethe.png" alt="foto-goethe" height="300" width="300"></a>
-                        </div>
-                        <div class="col-md-7">
-                            <ul class="float-right">
+                    <ul class="float-right">
+                        <div class="row r24">
+                            <div class="offset-md-1 col-md-4 foto-DSH">
+                                <a class="foto-DSHa" href="./"><img src="201005goethe.png" alt="foto-goethe" height="300" width="300"></a>
+                            </div>
+                            <div class="col-md-7 goethemerkmal">
                                 <li class="goetheli">Goetheの特徴</li>
-                                <p class="goethetext">
+                                <p class="p1 goethetext">
                                     このテストはあらゆる場所で有効な国際的なテストです。
                                     CEFRと言ってヨーロッパ全体で外国語の学習者の習得状況を示す際に用いられるガイドラインに則りテストが作られています。
                                     レベルはA1・A2・B1・B2・C1・C2の6つに別れていていますので自身のドイツ語力を証明したり、
                                     ドイツ語を学習している途中でドイツ語習得のモチベーションのための目標設定としておすすめのテストです。
-                                    芸術系ではない普通の学部に進学したい場合、ゲーテのC2を求める大学が多いので大学入学のための語学証明としては受験する人は少ない印象です。
+                                    芸術系ではない普通の学部に進学したい場合、ゲーテのC2を求める大学が多いので大学入学のための語学証明としては受験する人は少���い印象です。
                                     日本でも受験でき、年に２回大阪と東京で受験できます。
-                                <li class="telcli">試験の構成</li>
-                                <ul class="telctext3">
-                                    <li class="li-DSH-struktur">Leseverstehen(読解)　70分</li>
-                                    <li class="li-DSH-struktur">Hörverstehen(聞き取り)　40分</li>
-                                    <li class="li-DSH-struktur">Textproduktion(作文)　80分</li>
-                                    <li class="li-DSH-struktur">mündlicher Ausdruck (口頭試験) 10分程度</li><br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="offset-md-1 col-md-6 goethestr">
+                                <li class="goetheli">試験の構成</li>
+                                <ul class="goethetext">
+                                    <li class="p1 li-DSH-struktur">Leseverstehen(読解)　70分</li>
+                                    <li class="p1 li-DSH-struktur">Hörverstehen(聞き取り)　40分</li>
+                                    <li class="p1 li-DSH-struktur">Textproduktion(作文)　80分</li>
+                                    <li class="p1 li-DSH-struktur">mündlicher Ausdruck (口頭試験) 10分程度</li><br>
                                 </ul>
-                                <br>
+                            </div>
+                            <div class="offset-md-1 col-md-4 goethebesthe">
                                 <li class="goetheli">合格基準</li>
-                                <p>
+                                <p class="p1 goethetext">
                                     全ての科目で60%以上正解する必要があります。
                                 </p>
-                            </ul>    
+                            </div>    
                         </div>    
-                    </div>        
+                    </ul>        
                 </div>
             </div>
             <div class="row ttest">
-                <div class="offset-md-1 col-md-4">
-                    <div class="offset-md-1 testli">
-                        開催日時と申し込み
+                <div class="offset-md-1 col-md-7">
+                    <h4 class="filtermaturi">開催日時と申し込み</h4>
+                    <div class="circle-11"></div>
+                    <div class="circle-12"></div>
+                    <div class="circle-13"></div>
+                    <div class="circle-14"></div>
+                    <div class="row">
+                        <div class="col-md-6 search-box">
+                            <form class="filterrecht">
+                        		<span class="search-box_label"><テストの種類></span><br>
+                                <input class="map-cb" type="checkbox" name="DSH"/>DSH
+                                <input class="map-cb" type="checkbox" name="TestDaF"/>TestDaF
+                                <input class="map-cb" type="checkbox" name="Telc"/>Telc
+                                <input class="map-cb" type="checkbox" name="Goethe "/>Goethe
+                            </form>    
+                        </div>
+                        <div class="col-md-6 search-box">
+                            <form class="filterrecht">
+                                <span class="search-box_label"><筆記試験日> 2021年</span><br>
+                                <input type="checkbox" class="tag-cb" name="wann" value="01">1月
+                                <input type="checkbox" class="tag-cb" name="wann" value="02">2月
+                                <input type="checkbox" class="tag-cb" name="wann" value="03">3月
+                                <input type="checkbox" class="tag-cb" name="wann" value="04">4月
+                                <input type="checkbox" class="tag-cb" name="wann" value="05">5月
+                                <input type="checkbox" class="tag-cb" name="wann" value="06">6月<br>
+                                <input type="checkbox" class="tag-cb" name="wann" value="07">7月
+                                <input type="checkbox" class="tag-cb" name="wann" value="08">8月
+                                <input type="checkbox" class="tag-cb" name="wann" value="09">9月
+                                <input type="checkbox" class="tag-cb" name="wann" value="10">10月
+                                <input type="checkbox" class="tag-cb" name="wann" value="11">11月
+                                <input type="checkbox" class="tag-cb" name="wann" value="12">12月
+                            </form>
+                        </div>    
+                    </div>    
+                    <div class="col-md-11" id="target">
                     </div>
-                    <form>
-                    	<div class="search-box">
-                    		<span class="search-box_label"><テストの種類></span><br>
-                    		<input type="radio" name="kind" value="">ALL
-                    		<input type="radio" name="kind" value="DSH">DSH
-                    		<input type="radio" name="kind" value="TestDaF">TestDaF
-                    		<input type="radio" name="kind" value="Telc">Telc
-                    		<input type="radio" name="kind" value="Goethe ">Goethe
-                    	</div>
-                    
-                    	<div class="search-box">
-                    		<span class="search-box_label"><筆記試験日> 2021年</span><br>
-                    		<input type="checkbox" name="wann" value="">ALL
-                    		<input type="checkbox" name="wann" value="1月">1月
-                    		<input type="checkbox" name="wann" value="2月">2月
-                    		<input type="checkbox" name="wann" value="3月">3月
-                    		<input type="checkbox" name="wann" value="4月">4月
-                    		<input type="checkbox" name="wann" value="5月">5月
-                    		<input type="checkbox" name="wann" value="6月">6月<br>
-                    		<input type="checkbox" name="wann" value="7月">7月
-                    		<input type="checkbox" name="wann" value="8月">8月
-                    		<input type="checkbox" name="wann" value="9月">9月
-                    		<input type="checkbox" name="wann" value="10月">10月
-                    		<input type="checkbox" name="wann" value="11月">11月
-                    		<input type="checkbox" name="wann" value="12月">12月
-                    	</div>
-                    	<div class="search-box">
-                    		<span class="search-box_label"><場所></span><br>
-                    		<input type="checkbox" name="wo" value="">ALL<br>
-                    		<input type="checkbox" name="wo" value="Baden-Württemberg">Baden-Württemberg<br>
-                    		<input type="checkbox" name="wo" value="Bayern">Bayern<br>
-                    		<input type="checkbox" name="wo" value="Berlin">Berlin<br>
-                    		<input type="checkbox" name="wo" value="Brandenburg">Brandenburg<br>
-                    		<input type="checkbox" name="wo" value="Bremen">Bremen<br>
-                    		<input type="checkbox" name="wo" value="Hamburg">Hamburg<br>
-                    		<input type="checkbox" name="wo" value="Hessen">Hessen<br>
-                    		<input type="checkbox" name="wo" value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern<br>
-                    		<input type="checkbox" name="wo" value="Niedersachsen">Niedersachsen<br>
-                    		<input type="checkbox" name="wo" value="Nordrhein-Westfalen">Nordrhein-Westfalen<br>
-                    		<input type="checkbox" name="wo" value="Rheinland-Pfalz">Rheinland-Pfalz<br>
-                    		<input type="checkbox" name="wo" value="Saarland">Saarland<br>
-                    		<input type="checkbox" name="wo" value="Sachsen">Sachsen<br>
-                    		<input type="checkbox" name="wo" value="Sachsen-Anhalt">Sachsen-Anhalt<br>
-                    		<input type="checkbox" name="wo" value="Schleswig-Holstein">Schleswig-Holstein<br>
-                    		<input type="checkbox" name="wo" value="Thüringen">Thüringen<br>
-                    	</div>
-                    </form>
                 </div>
-                <div class="col-md-7">
-                    <ul class="list">
-                        <?php foreach($prufungen as $prufung){ ?>
-                            <li class="list_item" data-kind="<?php print $prufung['art']; ?>" data-wann="<?php print (str_replace("0", "", substr($prufung['tag'], 3, 2)) . "月"); ?>" data-wo="<?php print $prufung['land']; ?>"><a href="<?php print $prufung['url']; ?>" target="_blank"><?php print $prufung['name']; ?></a></li>
-                        <?php } ?>
-                    </ul>
+                <div class="col-md-4 table">
+                    <a href="new.php" class="btn btn-warning">新規試験情報登録</a>
+                    <br>
+                    <div id="sidebar"></div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-10 mt-3">
-                    <h1 class="text-center maph1">試験会場一覧</h1>
-                </div>
-                <div class="col-sm-2 mt-4">
-                    <a href="new.php" class="btn btn-primary">新規試験情報登録</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <input class="map-cb" type="checkbox" name="DSH"/>DSH
-                    <input class="map-cb" type="checkbox" name="TestDaF"/>TestDaF
-                    <input class="map-cb" type="checkbox" name="Telc"/>Telc
-                    <input class="map-cb" type="checkbox" name="Goethe "/>Goethe
-                </div>
-            </div>
-            <div class="row mt-3">
-                <table class="offset-sm-1 col-sm-11 table">
-                    <tr>
-                        <td><div id="target"></div></td>
-                        <td><div id="sidebar"></div></td>
-                    </tr>
-                </table>
-            </div>
-           
-            <div id="visum"class="row visum">
+            <div id="visum" class="row visum">
                 <div class="offset-md-1 col-md-10 visumerk">
-                    <h1>滞在許可（ビザ）を取得しよう</h1>
-                    <h6>ドイツに９０日以上滞在する場合は滞在許可が必要です。<br>
+                    <a href="./" class="guruguru" id="slide-1"><img src="201108guruguru.png" alt="guruguru" width="1200" height="300"></a>
+                    <h1 class="visumh1">滞在許可（ビザ）を取得しよう</h1>
+                    <h6 class="visumh1">ドイツに９０日以上滞在する場合は滞在許可が必要です。<br>
                     今回はドイツで学びたい人がよく使うビザを４つご紹介します。市によって、担当者によって、なんなら担当者の気分によって細かい基準が変わるので注意しましょう。
                     ビサを取得するためにまず住民登録、銀行口座開設、保険加入する必要があります</h6>
                 </div>
@@ -515,7 +491,7 @@
             </div>
             <div class="row mt-2" id="fragens">
                 <div class="col-md-12 text-center">
-                    <h2>質問コーナー</h2>
+                    <h2 class="fragensh2">質問コーナー</h2>
                 </div>    
             </div>
             <div class="row tabel">
@@ -524,39 +500,40 @@
                 <!--    <a href="new.php" class="btn btn-primary">新規投稿</a>-->
                 <!--</div>-->
                 <!--<div class=" mt-2">-->
-                <form class=" offset-md-1 col-md-4" action="index.php" method="POST" enctype="multipart/form-data">
+                <form class="col-md-4" action="index.php" method="POST" enctype="multipart/form-data">
                     <!-- 1行 -->
                     <div class="form-group row">
-                        <label class="col-2 col-form-label">名前</label>
-                        <div class="col-10">
+                        <label class="offset-2 col-3 col-form-label">名前</label>
+                        <div class="col-7">
                             <input type="text" class="form-control" name="name" required>
                         </div>
                     </div>
                 
                     <!-- 1行 -->
                     <div class="form-group row">
-                        <label class="col-2 col-form-label">メールアドレス</label>
-                        <div class="col-10">
+                        <label class="offset-2 col-3 col-form-label">メール<br>アドレス</label>
+                        <div class="col-7">
                             <input type="text" class="form-control" name="email" required>
                         </div>
                     </div>
                     
                     <!-- 1行 -->
                     <div class="form-group row">
-                        <label class="col-2 col-form-label">質問</label>
-                        <div class="col-10">
-                            <input type="text" class="form-control" name="fragen" required>
+                        <label class="offset-2 col-3 col-form-label2">質問</label>
+                        <div class="col-7">
+                            <!--<input type="text" class="form-control1" name="fragen" required>-->
+                            <textarea rows="8" cols="30"></textarea>
                         </div>
                     </div>
                     
                     <!-- 1行 -->
                     <div id="frage" class="form-group row">
                         <div class="offset-2 col-10">
-                            <button type="submit" class="btn btn-primary">投稿</button>
+                            <button type="submit" class="btn btn-warning">投稿</button>
                         </div>
                     </div>
                 </form>
-                <div class="col-md-7">
+                <div class="col-md-8">
                     <?php if(count($fragens) !== 0){ ?> 
                         <table class="offset-md-1 col-md-10 table table-bordered table-striped">
                             <tr>
@@ -577,7 +554,10 @@
                     <?php }else{ ?>
                             <p>データ一件もありません。</p>
                     <?php } ?>
-                </div>    
+                </div> 
+                <div class="offset-md-5 pagetop">
+                    <a href="#hero-header"><font color="#ffd">▲ ページトップへ </a>
+                </div>
             </div>
         </div>
             <!-- MarkerCluster -->
