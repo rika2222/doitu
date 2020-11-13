@@ -6,9 +6,11 @@
     $data = array();
     
     // DB接続情報
-    $dsn = 'mysql:host=localhost;dbname=deutsch';
-    $db_username = 'root';
-    $db_password = '';
+    $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
+    $db['dbname'] = ltrim($db['path'], '/');  
+    $dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
+    $db_usernamedb_ = $db['user'];
+    $db_password = $db['pass'];
     
     // DB接続情報設定・SQL準備・接続
     
