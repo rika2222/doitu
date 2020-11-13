@@ -72,6 +72,31 @@
         exit;
     }
     
+    //質問番号から答えの一覧を求める関数
+    function get_antworten($fragen_id){
+        try {
+            $dsn = 'mysql:host=localhost;dbname=deutsch';
+            $username = 'root';
+            $password = '';
+            $options = array(
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,        // 失敗したら例外を投げる
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_CLASS,   //デフォルトのフェッチモードはクラス
+                PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',   //MySQL サーバーへの接続時に実行するコマンド
+            ); 
+            
+            $pdo = new PDO($dsn, $username, $password, $options);
+            $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+                
+            $stmt = $pdo->prepare('SELECT * FROM antworten where fragen_id=:fragen_id order by id desc');
+            $stmt->bindParam(':fragen_id', $fragen_id, PDO::PARAM_INT);
+            $stmt->execute();
+            $antworten = $stmt->fetchAll();
+            return $antworten;
+        } catch (PDOException $e) {
+            echo 'PDO exception: ' . $e->getMessage();
+            exit;
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="ja">
@@ -88,7 +113,6 @@
     <script src="jquery-ui-1.10.3.custom.min.js"></script>
     <script src="jquery.ba-throttle-debounce.min.js"></script>
     <script src="jquery.smooth-scroll.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <script src="main.js"></script>
 
 </head>
@@ -522,7 +546,7 @@
                         <label class="offset-2 col-3 col-form-label2">質問</label>
                         <div class="col-7">
                             <!--<input type="text" class="form-control1" name="fragen" required>-->
-                            <textarea rows="8" cols="30"></textarea>
+                            <textarea rows="8" cols="30" name="fragen" required></textarea>
                         </div>
                     </div>
                     
@@ -546,7 +570,16 @@
                             <tr>
                                 <td><?php print $fragen['name']; ?></td>
                                 <td><?php print $fragen['fragen']; ?></td>
-                                <td><?php print $fragen['antwort']; ?></td>
+                                <td>
+                                    <?php
+                                        $antworten = get_antworten($fragen["id"])
+                                    ?>
+                                    <ul>
+                                        <?php foreach($antworten as $antwort){ ?>
+                                        <li class="comment"><?php print $antwort["comment"]; ?></li>
+                                        <?php } ?>
+                                    </ul>
+                                </td>
                                 <td><a href="show.php?id=<?php print $fragen['id'] ?>">答える</a></td>
                             </tr>
                         <?php } ?>

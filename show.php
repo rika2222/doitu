@@ -39,7 +39,7 @@
         $fragen = '';
         
         $fragen_id = $_POST['id'];
-        $antwort = $_POST['antwort'];
+        $comment = $_POST['comment'];
         
         try {
     
@@ -52,24 +52,24 @@
             $pdo = new PDO($dsn, $username, $password, $options);
             $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             
-            $stmt = $pdo->prepare('SELECT * FROM fragens where id = :id');
-            $stmt->bindValue(':id', $fragen_id, PDO::PARAM_INT);
-            $stmt->execute();
+            // $stmt = $pdo->prepare('SELECT * FROM fragens where id = :id');
+            // $stmt->bindValue(':id', $fragen_id, PDO::PARAM_INT);
+            // $stmt->execute();
             
-            $fragen = $stmt->fetch();
+            // $fragen = $stmt->fetch();
             
-            $pdo = new PDO($dsn, $username, $password, $options);
-            $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            // $pdo = new PDO($dsn, $username, $password, $options);
+            // $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
  
-            $stmt = $pdo->prepare('UPDATE fragens set antwort=:antwort where id = :id');
-            if($fragen['antwort'] != null){
-                $final_antwort = $fragen['antwort'] . '<br>・' . $antwort;
-            } else {
-                $final_antwort = $antwort;
-            }
+            $stmt = $pdo->prepare('insert into antworten(fragen_id, comment) values(:fragen_id, :comment)');
+            // if($fragen['antwort'] != null){
+            //     $final_antwort = $fragen['antwort'] . '<br>・' . $antwort;
+            // } else {
+            //     $final_antwort = $antwort;
+            // }
             
-            $stmt->bindParam(':antwort', $final_antwort, PDO::PARAM_STR);
-            $stmt->bindValue(':id', $fragen_id, PDO::PARAM_INT);
+            $stmt->bindParam(':fragen_id', $fragen_id, PDO::PARAM_INT);
+            $stmt->bindParam(':comment', $comment, PDO::PARAM_STR);
             
             $stmt->execute();
             
@@ -142,7 +142,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">答える</label>
                         <div class="col-10">
-                            <input type="text" class="form-control" name="antwort" required>
+                            <input type="text" class="form-control" name="comment" required>
                         </div>
                     </div>
                     
