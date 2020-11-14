@@ -274,7 +274,7 @@
                     <ul class="float-right">
                         <div class="row r21">
                             <div class="offset-md-1 col-md-4 foto-DSH">
-                                <a class="foto-DSHa" href="./"><img src="201002testdaf.jpg" alt="foto-testdaf" height="300" width="300"></a>
+                                <a class="foto-DSHa" href="./"><img src="201002testdaf.jpg" alt="foto-testdaf" height="300" width="100%"></a>
                             </div>
                             <div class="col-md-7 TDmerkmsl">
                                 <li class="testdafli">TestDafの特徴</li>
