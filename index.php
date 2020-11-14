@@ -166,9 +166,9 @@
                     <h1 class="mir">自己紹介</h1>
                     <p class="text1">はじめまして、高木吏花です。
                     三年間ドイツに留学した時に情報収集がとても大変だった経験を活かし、このサイトを制作しました。ドイツ留学を目指す皆さんのお役に立てれば嬉しいです！</p>
-                    <div class="circle-4"></div>
+                    <!-- <div class="circle-4"></div>
                     <div class="circle-5"></div>
-                    <div class="circle-6"></div>
+                    <div class="circle-6"></div> -->
                 </div>
             </div>
             <div id="verfahren" class="row">
@@ -459,10 +459,8 @@
                 </div>
             </div>
             <div id="visum" class="row visum">
-                <div class="col-md-12">
-                    <a href="./" class="guruguru" id="slide-1"><img src="201108guruguru.png" alt="guruguru" width="1200" height="300"></a>
-                </div> 
                 <div class="offset-md-1 col-md-10 visumerk">
+                    <a href="./" class="guruguru" id="slide-1"><img src="201108guruguru.png" alt="guruguru" width="100%" height="300"></a>
                     <h1 class="visumh1">滞在許可（ビザ）を取得しよう</h1>
                     <h6 class="visumh1">ドイツに９０日以上滞在する場合は滞在許可が必要です。<br>
                     今回はドイツで学びたい人がよく使うビザを４つご紹介します。市によって、担当者によって、なんなら担当者の気分によって細かい基準が変わるので注意しましょう。
