@@ -297,7 +297,7 @@ img { vertical-align: middle; }
   background: #fc2;
   opacity: 0.8;
   border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
-  position: absolute; top: 195px; left: 85%; width: 200px; height: 200px;
+  position: absolute; top: 195px; left: 84%; width: 200px; height: 200px;
   z-index: 30;
 }
 .circle-7 {
