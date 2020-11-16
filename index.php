@@ -274,7 +274,7 @@
                     <ul class="float-right">
                         <div class="row r21">
                             <div class="offset-md-1 col-md-4 foto-DSH">
-                                <a class="foto-DSHa" href="./"><img src="201002testdaf.jpg" alt="foto-testdaf" height="300" width="100%"></a>
+                                <a class="foto-DSHa" href="./"><img src="201002testdaf.jpg" alt="foto-testdaf" height="90%" width="90%"></a>
                             </div>
                             <div class="col-md-7 TDmerkmsl">
                                 <li class="testdafli">TestDafの特徴</li>
@@ -325,9 +325,9 @@
                 </div>
                 <div class="col-md-12 tab_item" id="item3">
                     <ul class="float-right">
-                        <div class="row">
+                        <div class="row r22">
                             <div class="offset-md-1 col-md-4 foto-DSH">
-                                <a class="foto-DSHa" href="./"><img src="201005telc.jpeg" alt="foto-telc" height="400" width="300"></a>
+                                <a class="foto-DSHa" href="./"><img src="201005telc.jpeg" alt="foto-telc" height="110%" width="110%"></a>
                             </div>
                             <div class="col-md-7 telcmerkmal">
                                 <li class="telcli">Telc C1 Hochschuleの特徴</li>
@@ -345,7 +345,7 @@
                                 </p>
                             </div>   
                         </div> 
-                        <div class="row">
+                        <div class="row r23">
                             <div class="offset-md-1 col-md-6 telcstr">
                                 <li class="telcli">試験の構成</li>
                                 <ul class="telctext">
@@ -380,7 +380,7 @@
                     <ul class="float-right">
                         <div class="row r24">
                             <div class="offset-md-1 col-md-4 foto-DSH">
-                                <a class="foto-DSHa" href="./"><img src="201005goethe.png" alt="foto-goethe" height="300" width="300"></a>
+                                <a class="foto-DSHa" href="./"><img src="201005goethe.png" alt="foto-goethe" height="100%" width="100%"></a>
                             </div>
                             <div class="col-md-7 goethemerkmal">
                                 <li class="goetheli">Goetheの特徴</li>
