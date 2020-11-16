@@ -166,9 +166,9 @@
                     <h1 class="mir">自己紹介</h1>
                     <p class="text1">はじめまして、高木吏花です。
                     三年間ドイツに留学した時に情報収集がとても大変だった経験を活かし、このサイトを制作しました。ドイツ留学を目指す皆さんのお役に立てれば嬉しいです！</p>
-                    <!-- <div class="circle-4"></div>
+                    <div class="circle-4"></div>
                     <div class="circle-5"></div>
-                    <div class="circle-6"></div> -->
+                    <div class="circle-6"></div>
                 </div>
             </div>
             <div id="verfahren" class="row">
