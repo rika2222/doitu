@@ -496,7 +496,7 @@ a {
 }
 #item1 {
     padding-top: 30px;
-    height: 1050px;
+    height: 100%;
     background-color: #ff7f50;
     font-weight: bold; 
 }
@@ -512,6 +512,7 @@ a {
     background-color: white;
     border-radius: 50px;
     padding-bottom: 30px;
+   /* height: 100%;*/
 }
 .DSHtext {
     margin: 30px;
@@ -555,11 +556,14 @@ a {
 }
 #item2 {
     padding-top: 30px;
-    height: 910px;
+    height: 100%;
     background-color: #f9d56e;
 }
-.r21 {
-    height: 360px;
+.r23{
+  margin-bottom: 20px;
+}
+/*.r21 {
+    height: 360px;*/
 }
 .foto-DSH {
     padding-top: 30px;
@@ -574,7 +578,7 @@ a {
 .TDmerkmsl {
     background-color: white;
     border-radius: 50px;
-    height: 350px;
+    /*height: 350px;*/
 }
 .testdaftext {
     margin: 30px;
@@ -601,7 +605,7 @@ a {
 }
 #item3 {
     padding-top: 30px;
-    height: 900px;
+    height: 100%;
     background-color: #ff6347;
 }
 .telcli {
@@ -614,7 +618,7 @@ a {
 .telcmerkmal{
     background-color: white;
     border-radius: 50px;
-    height: 470px;
+    height: 100%;
 }
 .telctext {
     font-weight: bold; 
@@ -629,11 +633,11 @@ a {
 }
 #item4 {
     padding-top: 30px;
-    height: 670px;
+    height: 100%;
     background-color: #f92;
 }
 .r24 {
-    height: 370px;
+    margin-bottom: 20px;
 }
 .goetheli {
     color: #f92;
@@ -645,7 +649,7 @@ a {
 .goethemerkmal {
     background-color: white;
     border-radius: 50px;
-    height: 300px;
+    height: 100%;
 }
 .goethestr {
     background-color: white;
