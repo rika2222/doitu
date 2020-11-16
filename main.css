@@ -283,21 +283,21 @@ img { vertical-align: middle; }
   opacity: 0.8;
   border-radius: 60% 40% 50% 40%/30% 50% 60% 50%;
   animation: border-animation 4s infinite linear;
-  position: absolute; top: -30px; left: 540px; width: 160px; height: 160px;
+  position: absolute; top: -30px; left: 80%; width: 160px; height: 160px;
   z-index: 30;
 }
 .circle-5 {
   background: #f66;
   opacity: 1;
   border-radius: 80% 30% 50% 50%/50%;
-  position: absolute; top: 200px; left: 500px; width: 150px; height: 140px;
+  position: absolute; top: 200px; left: 90%; width: 150px; height: 140px;
   z-index: 5;
 }
 .circle-6 {
   background: #fc2;
   opacity: 0.8;
   border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
-  position: absolute; top: 195px; left: 620px; width: 200px; height: 200px;
+  position: absolute; top: 195px; left: 85%; width: 200px; height: 200px;
   z-index: 30;
 }
 .circle-7 {
@@ -318,7 +318,7 @@ img { vertical-align: middle; }
   background: #fc2;
   border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
   animation: border-animation 50s infinite linear;
-  position: absolute; top: 280px; left: 420px; width: 120px; height: 120px;
+  position: absolute; top: 75%; left: 420px; width: 120px; height: 120px;
   z-index: 30;
 }
 /*.circle-10 {*/
