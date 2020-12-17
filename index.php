@@ -106,6 +106,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ドイツ留学ナビ</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ropa+Sans">
+    <script data-ad-client="ca-pub-2970989742594516" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
