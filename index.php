@@ -3,7 +3,6 @@
     $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
     $db['dbname'] = ltrim($db['path'], '/');  
     $dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
-    var_dump($dsn );exit();
     $username = $db['user'];
     $password = $db['pass'];
     $fragens = array();
@@ -77,9 +76,15 @@
     //質問番号から答えの一覧を求める関数
     function get_antworten($fragen_id){
         try {
-            $dsn = 'mysql:host=localhost;dbname=deutsch';
-            $username = 'root';
-            $password = '';
+            $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
+            $db['dbname'] = ltrim($db['path'], '/');  
+            $dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
+            $username = $db['user'];
+            $password = $db['pass'];
+
+            // $dsn = 'mysql:host=localhost;dbname=deutsch';
+            // $username = 'root';
+            // $password = '';
             $options = array(
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,        // 失敗したら例外を投げる
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_CLASS,   //デフォルトのフェッチモードはクラス
