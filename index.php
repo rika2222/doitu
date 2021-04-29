@@ -3,10 +3,6 @@
     $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
     $db['dbname'] = ltrim($db['path'], '/');  
     $dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
-    echo "<pre>";
-    var_dump( $dsn );
-    echo "</pre>";
-    echo "---------------";
     $username = $db['user'];
     $password = $db['pass'];
     $fragens = array();
@@ -34,9 +30,6 @@
         $name = $_POST['name'];
         $email = $_POST['email'];
         $fragen = $_POST['fragen'];
-        echo "<pre>";
-        var_dump( $dsn );
-        echo "</pre>";
 
         try {
     
@@ -105,7 +98,6 @@
             $stmt->bindParam(':fragen_id', $fragen_id, PDO::PARAM_INT);
             $stmt->execute();
             $antworten = $stmt->fetchAll();
-            var_dump($antworten);exit();
             return $antworten;
         } catch (PDOException $e) {
             echo 'PDO exception: ' . $e->getMessage();
