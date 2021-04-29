@@ -47,7 +47,6 @@
             ); 
             
             $pdo = new PDO($dsn, $username, $password, $options);
-            $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             
             $stmt = $pdo->prepare("INSERT INTO fragens (name, email, fragen) VALUES (:name, :email, :fragen)");
             $stmt->bindParam(':name', $name, PDO::PARAM_STR);
