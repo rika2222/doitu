@@ -3,6 +3,7 @@
     $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
     $db['dbname'] = ltrim($db['path'], '/');  
     $dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
+    var_dump($dsn );
     $username = $db['user'];
     $password = $db['pass'];
     $fragens = array();
