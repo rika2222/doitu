@@ -39,7 +39,6 @@
                 PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',   //MySQL サーバーへの接続時に実行するコマンド
             ); 
             
-            var_dump($dsn, $username, $password, $options);exit();
             $pdo = new PDO($dsn, $username, $password, $options);
             $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             
