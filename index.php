@@ -98,6 +98,7 @@
             $stmt->bindParam(':fragen_id', $fragen_id, PDO::PARAM_INT);
             $stmt->execute();
             $antworten = $stmt->fetchAll();
+            var_dump($antworten);exit();
             return $antworten;
         } catch (PDOException $e) {
             echo 'PDO exception: ' . $e->getMessage();
